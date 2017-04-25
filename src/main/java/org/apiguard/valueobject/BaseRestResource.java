@@ -1,6 +1,10 @@
 package org.apiguard.valueobject;
 
+import org.apiguard.commons.utils.DateTimeFormater;
+import org.springframework.util.StringUtils;
+
 import java.io.Serializable;
+import java.util.Date;
 import java.util.UUID;
 
 public class BaseRestResource implements Serializable {
@@ -14,8 +18,17 @@ public class BaseRestResource implements Serializable {
 	
 	public BaseRestResource(UUID id, String creationDate, String lastUpdateDate) {
 		this.id = id;
-		this.creationDate = creationDate;
-		this.lastUpdateDate = lastUpdateDate;
+
+		if (StringUtils.isEmpty(creationDate) && StringUtils.isEmpty(lastUpdateDate)) {
+			String date = DateTimeFormater.toString(new Date());
+			this.creationDate = date;
+			this.lastUpdateDate = date;
+		}
+		else {
+			this.creationDate = creationDate;
+			this.lastUpdateDate = lastUpdateDate;
+		}
+
 	}
 
 	public UUID getId() {

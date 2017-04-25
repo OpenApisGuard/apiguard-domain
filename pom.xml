@@ -5,4 +5,12 @@
 	<artifactId>apiguard-domain</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Api Guard Domain Base</name>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.apiguard</groupId>
+			<artifactId>commons</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
 </project>
