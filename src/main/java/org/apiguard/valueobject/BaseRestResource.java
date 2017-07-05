@@ -5,18 +5,17 @@ import org.springframework.util.StringUtils;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.UUID;
 
 public class BaseRestResource implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	private UUID id;
+	private String id;
 	
 	private String creationDate;
 
 	private String lastUpdateDate;
 	
-	public BaseRestResource(UUID id, String creationDate, String lastUpdateDate) {
+	public BaseRestResource(String id, String creationDate, String lastUpdateDate) {
 		this.id = id;
 
 		if (StringUtils.isEmpty(creationDate) && StringUtils.isEmpty(lastUpdateDate)) {
@@ -31,7 +30,7 @@ public class BaseRestResource implements Serializable {
 
 	}
 
-	public UUID getId() {
+	public String getId() {
 		return id;
 	}
 	

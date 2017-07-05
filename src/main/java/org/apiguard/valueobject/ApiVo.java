@@ -1,8 +1,5 @@
 package org.apiguard.valueobject;
 
-import java.util.Date;
-import java.util.UUID;
-
 public class ApiVo extends BaseRestResource {
 	private static final long serialVersionUID = 1L;
 
@@ -26,7 +23,7 @@ public class ApiVo extends BaseRestResource {
 	
 	private boolean isLdapAuth;
 	
-	public ApiVo(UUID id, String creationDate, String lastUpdateDate, String name, String reqUri, String downstreamUri, boolean isAuthRequired, boolean isBasicAuth, boolean isKeyAuth, boolean isHmacAuth, boolean isOAuth2Auth, boolean isJwtAuth, boolean isLdapAuth) {
+	public ApiVo(String id, String creationDate, String lastUpdateDate, String name, String reqUri, String downstreamUri, boolean isAuthRequired, boolean isBasicAuth, boolean isKeyAuth, boolean isHmacAuth, boolean isOAuth2Auth, boolean isJwtAuth, boolean isLdapAuth) {
 		super(id, creationDate, lastUpdateDate);
 		this.reqUri = reqUri;
 		this.name = name;

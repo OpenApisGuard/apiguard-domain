@@ -1,8 +1,5 @@
 package org.apiguard.valueobject;
 
-import java.util.Date;
-import java.util.UUID;
-
 public class KeyAuthVo extends BaseRestResource {
 
 	private static final long serialVersionUID = 1L;
@@ -13,7 +10,7 @@ public class KeyAuthVo extends BaseRestResource {
 	
 	private String reqUri;
 
-	public KeyAuthVo(UUID id, String creationDate, String lastUpdateDate, String clientId, String key, String reqUri) {
+	public KeyAuthVo(String id, String creationDate, String lastUpdateDate, String clientId, String key, String reqUri) {
 		super(id, creationDate, lastUpdateDate);
 		this.clientId = clientId;
 		this.key = key;

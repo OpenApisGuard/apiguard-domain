@@ -1,7 +1,5 @@
 package org.apiguard.valueobject;
 
-import java.util.UUID;
-
 public class BasicAuthVo extends BaseRestResource {
 
 	private static final long serialVersionUID = 1L;
@@ -12,7 +10,7 @@ public class BasicAuthVo extends BaseRestResource {
 	
 	private String reqUri;
 
-	public BasicAuthVo(UUID id, String creationDate, String lastUpdateDate, String clientId, String password, String reqUri) {
+	public BasicAuthVo(String id, String creationDate, String lastUpdateDate, String clientId, String password, String reqUri) {
 		super(id, creationDate, lastUpdateDate);
 		this.clientId = clientId;
 		this.password = password;
@@ -24,7 +22,7 @@ public class BasicAuthVo extends BaseRestResource {
 	}
 
 	public String getPassword() {
-		return password;
+		return "******";
 	}
 
 	public String getReqUri() {

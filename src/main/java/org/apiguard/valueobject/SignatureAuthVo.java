@@ -1,7 +1,5 @@
 package org.apiguard.valueobject;
 
-import java.util.UUID;
-
 public class SignatureAuthVo extends BaseRestResource {
 
 	private static final long serialVersionUID = 1L;
@@ -14,7 +12,7 @@ public class SignatureAuthVo extends BaseRestResource {
 	
 	private String reqUri;
 
-	public SignatureAuthVo(UUID id, String creationDate, String lastUpdateDate, String clientAlias, String clientId, String secret, String reqUri) {
+	public SignatureAuthVo(String id, String creationDate, String lastUpdateDate, String clientAlias, String clientId, String secret, String reqUri) {
 		super(id, creationDate, lastUpdateDate);
 		this.clientAlias = clientAlias;
 		this.clientId = clientId;
