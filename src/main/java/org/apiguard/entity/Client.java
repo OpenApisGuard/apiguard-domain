@@ -18,4 +18,10 @@ package org.apiguard.entity;
 
 public interface Client extends Base {
 	public String getClientId();
+
+	public String getFirstName();
+
+	public String getLastName();
+
+	public String getEmail();
 }
